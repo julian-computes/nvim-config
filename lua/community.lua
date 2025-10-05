@@ -14,7 +14,7 @@ return {
 	{ import = "astrocommunity.motion.mini-basics" },
 	{ import = "astrocommunity.motion.mini-ai" },
 	{ import = "astrocommunity.motion.mini-surround" },
-	{ import = "astrocommunity.test.vim-test" },
+	{ import = "astrocommunity.test.neotest" },
 	{ import = "astrocommunity.utility.noice-nvim" },
 	-- import/override with your plugins folder
 }
