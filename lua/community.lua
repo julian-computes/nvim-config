@@ -9,10 +9,12 @@ return {
 	{ import = "astrocommunity.pack.go" },
 	{ import = "astrocommunity.pack.json" },
 	{ import = "astrocommunity.pack.lua" },
+	{ import = "astrocommunity.pack.typescript-all-in-one" },
 	{ import = "astrocommunity.motion.leap-nvim" },
 	{ import = "astrocommunity.motion.mini-basics" },
 	{ import = "astrocommunity.motion.mini-ai" },
 	{ import = "astrocommunity.motion.mini-surround" },
+	{ import = "astrocommunity.test.vim-test" },
 	{ import = "astrocommunity.utility.noice-nvim" },
 	-- import/override with your plugins folder
 }
