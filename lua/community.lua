@@ -6,6 +6,7 @@
 return {
 	"AstroNvim/astrocommunity",
 	{ import = "astrocommunity.colorscheme.catppuccin" },
+	{ import = "astrocommunity.git.diffview-nvim" },
 	{ import = "astrocommunity.pack.go" },
 	{ import = "astrocommunity.pack.json" },
 	{ import = "astrocommunity.pack.lua" },
