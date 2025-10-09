@@ -2,7 +2,7 @@ return {
 	"sindrets/diffview.nvim",
 	keys = {
 		{
-			"<leader>gd",
+			"<leader>gD",
 			"<cmd>DiffviewOpen<cr>",
 			desc = "Open diffview",
 		},
