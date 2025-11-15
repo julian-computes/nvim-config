@@ -17,7 +17,11 @@ return {
 	{ import = "astrocommunity.motion.mini-jump" },
 	{ import = "astrocommunity.motion.mini-move" },
 	{ import = "astrocommunity.motion.mini-surround" },
-	{ import = "astrocommunity.test.neotest" },
+	{ import = "astrocommunity.session.vim-workspace" },
+	{ import = "astrocommunity.split-and-window.edgy-nvim" },
+	{ import = "astrocommunity.split-and-window.windows-nvim" },
+	{ import = "astrocommunity.test.vim-test" },
+	{ import = "astrocommunity.pack.clojure" },
 	{ import = "astrocommunity.utility.noice-nvim" },
 	-- import/override with your plugins folder
 }
