@@ -11,7 +11,6 @@ return {
 	{ import = "astrocommunity.pack.json" },
 	{ import = "astrocommunity.pack.lua" },
 	{ import = "astrocommunity.pack.typescript-all-in-one" },
-	{ import = "astrocommunity.motion.leap-nvim" },
 	{ import = "astrocommunity.motion.mini-ai" },
 	{ import = "astrocommunity.motion.mini-basics" },
 	{ import = "astrocommunity.motion.mini-jump" },
