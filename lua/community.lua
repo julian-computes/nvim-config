@@ -19,6 +19,7 @@ return {
 	{ import = "astrocommunity.split-and-window.windows-nvim" },
 	{ import = "astrocommunity.test.vim-test" },
 	{ import = "astrocommunity.pack.clojure" },
+	{ import = "astrocommunity.pack.zig" },
 	{ import = "astrocommunity.utility.noice-nvim" },
 	-- import/override with your plugins folder
 }
