@@ -113,6 +113,9 @@ return {
 		on_attach = function(client, bufnr)
 			-- this would disable semanticTokensProvider for all clients
 			-- client.server_capabilities.semanticTokensProvider = nil
+			client.server_capabilities.documentFormattingProvider = false
+			client.server_capabilities.documentRangeFormattingProvider = false
+			client.server_capabilities.documentOnTypeFormattingProvider = false
 		end,
 	},
 }
