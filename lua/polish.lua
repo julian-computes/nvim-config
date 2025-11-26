@@ -17,3 +17,6 @@ vim.api.nvim_create_autocmd({ "BufReadPost", "BufWinEnter", "BufEnter" }, {
 vim.opt.wrap = true
 vim.keymap.set("n", "<D-s>", "<Cmd>silent! update | redraw<CR>", { desc = "Save" })
 vim.keymap.set({ "i", "x" }, "<D-s>", "<Esc><Cmd>silent! update | redraw<CR>", { desc = "Save and go to Normal mode" })
+
+vim.keymap.set("n", "<leader>Y", ":let @+ = expand('%:p:.')<CR>", {desc = "Yank relative path of current buffer"})
+
