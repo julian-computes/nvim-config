@@ -88,12 +88,44 @@ return {
 					desc = "Find words in AstroNvim config files",
 				},
 
+				["<D-s>"] = { "<Cmd>silent! update | redraw<CR>", desc = "Save" },
+				["<Leader>Y"] = {
+					function()
+						vim.fn.setreg("+", vim.fn.expand("%:p:."))
+					end,
+					desc = "Yank relative path of current buffer",
+				},
+
 				-- tables with just a `desc` key will be registered with which-key if it's installed
 				-- this is useful for naming menus
 				-- ["<Leader>b"] = { desc = "Buffers" },
 
 				-- setting a mapping to false will disable it
 				-- ["<C-S>"] = false,
+			},
+			i = {
+				["<D-s>"] = { "<Esc><Cmd>silent! update | redraw<CR>", desc = "Save and go to Normal mode" },
+			},
+			x = {
+				["<D-s>"] = { "<Esc><Cmd>silent! update | redraw<CR>", desc = "Save and go to Normal mode" },
+			},
+		},
+		-- Configure auto commands
+		autocmds = {
+			conjure_log_config = {
+				{
+					event = { "BufReadPost", "BufWinEnter", "BufEnter" },
+					pattern = { "conjure-log-*.clj", "conjure-log-*.cljs", "conjure-log-*.cljc" },
+					desc = "Disable diagnostics and LSP for Conjure log buffers",
+					callback = function(ev)
+						vim.diagnostic.enable(false, { bufnr = ev.buf })
+						for _, client in pairs(vim.lsp.get_clients({ bufnr = ev.buf })) do
+							if client.name == "clojure_lsp" or client.name == "null-ls" then
+								pcall(vim.lsp.buf_detach_client, ev.buf, client.id)
+							end
+						end
+					end,
+				},
 			},
 		},
 	},
