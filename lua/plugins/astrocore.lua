@@ -96,6 +96,15 @@ return {
 					desc = "Yank relative path of current buffer",
 				},
 
+				["<Leader>W"] = {
+					function()
+						require("astrocore.buffer").close()
+						vim.cmd("ToggleWorkspace")
+						require("snacks").dashboard()
+					end,
+					desc = "Reset Workspace",
+				},
+
 				-- tables with just a `desc` key will be registered with which-key if it's installed
 				-- this is useful for naming menus
 				-- ["<Leader>b"] = { desc = "Buffers" },
