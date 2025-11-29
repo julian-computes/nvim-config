@@ -96,6 +96,13 @@ return {
 					desc = "Declaration of current symbol",
 					cond = "textDocument/declaration",
 				},
+				K = {
+					function()
+						vim.lsp.buf.hover()
+					end,
+					desc = "Hover symbol details",
+					cond = "textDocument/hover",
+				},
 				["<Leader>uY"] = {
 					function()
 						require("astrolsp.toggles").buffer_semantic_tokens()
